@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,11 +16,11 @@ namespace CapgeminiShoppingCart
         /// Shopping cart contructor.
         /// </summary>
         /// <param name="shoppingCart"></param>
-        /// <param name="productRespository"></param>
-        public ShoppingCart(List<string> shoppingCart, IProductRepository productRespository)
+        /// <param name="productRepository"></param>
+        public ShoppingCart(List<string> shoppingCart, IProductRepository productRepository)
         {
             this.shoppingCart = shoppingCart;
-            ProductRespository = productRespository;
+            ProductRespository = productRepository;
         }
 
         /// <summary>

@@ -4,9 +4,10 @@ namespace CapgeminiShoppingCart
 {
     public class ShoppingCartFactory : IShoppingCartFactory
     {
-        public ShoppingCart GetShoppingCart(List<string> shoppingList, IProductRepository productRespository)
+        public IShoppingCart GetShoppingCart(List<string> shoppingList, IProductRepository productRespository)
         {
-            return new ShoppingCart(shoppingList, productRespository);
+            // return new ShoppingCart(shoppingList, productRespository);
+            return new ShoppingCartOffer(shoppingList, productRespository);
         }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="IProductRespository.cs" />
     <Compile Include="IShoppingCart.cs" />
     <Compile Include="IShoppingCartFactory.cs" />
+    <Compile Include="ShoppingCartOffer.cs" />
     <Compile Include="ShoppingCartFactory.cs" />
     <Compile Include="ProductRespository.cs" />
     <Compile Include="Program.cs" />
