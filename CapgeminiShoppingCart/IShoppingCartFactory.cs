@@ -4,6 +4,6 @@ namespace CapgeminiShoppingCart
 {
     public interface IShoppingCartFactory
     {
-        ShoppingCart GetShoppingCart(List<string> shoppingList , IProductRespository productRespository);
+        ShoppingCart GetShoppingCart(List<string> shoppingList , IProductRepository productRespository);
     }
 }

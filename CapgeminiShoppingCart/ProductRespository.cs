@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace CapgeminiShoppingCart
 {
-    class ProductRespository : IProductRespository
+    class ProductRepository : IProductRepository
     {
 
         List<KeyValuePair<string, decimal>> products = new List<KeyValuePair<string, decimal>>

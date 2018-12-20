@@ -8,15 +8,31 @@ namespace CapgeminiShoppingCart
 {
     public class ShoppingCart : IShoppingCart
     {
+        /// <summary>
+        /// shop cart item list
+        /// </summary>
         private readonly List<string> shoppingCart;
-        public ShoppingCart(List<string> shoppingCart, IProductRespository productRespository)
+
+        /// <summary>
+        /// Shopping cart contructor.
+        /// </summary>
+        /// <param name="shoppingCart"></param>
+        /// <param name="productRespository"></param>
+        public ShoppingCart(List<string> shoppingCart, IProductRepository productRespository)
         {
             this.shoppingCart = shoppingCart;
             ProductRespository = productRespository;
         }
 
-        public IProductRespository ProductRespository { get; }
+        /// <summary>
+        /// repository object injected by contructor
+        /// </summary>
+        public IProductRepository ProductRespository { get; }
 
+        /// <summary>
+        /// method to checkout the cart and calculate total.
+        /// </summary>
+        /// <returns></returns>
         public decimal CheckOut()
         {
             var cartitems = shoppingCart.Distinct().ToList();
@@ -25,15 +41,6 @@ namespace CapgeminiShoppingCart
             foreach (var cartItem in cartitems)
             {
                 cartTotal += shoppingCart.Where(x => x.Equals(cartItem)).Count() * ProductRespository.GetProductPrice(cartItem);
-                //    switch (cartItem)
-                //    {
-                //        case "apple":
-                //            cartTotal += shoppingCart.Where(x => x.Equals(cartItem)).Count() * ProductRespository.GetProductPrice(cartItem);
-                //            break;
-                //        case "orange":
-                //            cartTotal += shoppingCart.Where(x => x.Equals(cartItem)).Count() * ProductRespository.GetProductPrice(cartItem);
-                //break;
-                //    }
             }
             return cartTotal;
         }

@@ -11,7 +11,7 @@ namespace CapgeminiShoppingCart
         static void Main(string[] args)
         {
             var shoppinglist = new List<string>() { "apple", "apple", "orange", "apple" };
-            ProductRespository productRespository = new ProductRespository();
+            ProductRepository productRespository = new ProductRepository();
             ShoppingCartFactory of = new ShoppingCartFactory();
 
             var shoppingCart = of.GetShoppingCart(shoppinglist, productRespository);

@@ -2,7 +2,7 @@
 
 namespace CapgeminiShoppingCart
 {
-    public interface IProductRespository
+    public interface IProductRepository
     {
         List<KeyValuePair<string, decimal>> GetProducts();
         decimal GetProductPrice(string name);
